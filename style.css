@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+a{
+  text-decoration: none;
+}
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  background-color: #fff5ec;
+}
+
+.hero nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 100px;
+}
+
+.logo {
+  font-size: 40px;
+  font-weight: 800;
+  color: #35cd8c;
+}
+
+.hero nav ul {
+  margin-right: 80px;
+}
+
+.hero nav ul li {
+  list-style: none;
+  display: inline-block;
+}
+
+
+.hero nav ul li a {
+  color: #4a4a4a;
+  font-weight: 500;
+  position: relative;
+  padding: 5px 10px;
+}
+
+.hero nav ul li a:hover {
+  color: #35cd8c;
+
+} 
+
+.icon {
+  z-index: 999;
+}
+
+.icon .user {
+  background: #fff;
+  font-size: 20px;
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  position: relative;
+}
+
+.icon .user::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: -4px;
+  right: 3px;
+  background-color: #31a24c;
+  border-radius: 50%;
+}
+
+.icon .icon-text {
+  color: #fff;
+  margin-left: 5px;
+}
+
+
+.icon .icon-text i{
+  margin-left: 5px;
+}
+
+
+.right-sidbar {
+  width: 30%;
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #35cd8c;
+}
+
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left {
+  width: 50%;
+  margin-left: 100px;
+  margin-top: 80px;
+}
+
+.left h2{
+  color: #f5ebe6;
+  font-size: 100px;
+  line-height: 1;
+}
+
+.left h3{
+  color: #2e266f;
+  font-size: 50px;
+  line-height: 1.2;
+}
+
+form {
+  position: relative;
+  width: 350px;
+  margin-top: 20px;
+}
+
+.left input[type="text"] {
+  padding: 14px;
+  width: 100%;
+  outline: none;
+  border: none;
+  color: #727272;
+}
+
+.left input[type="submit"] {
+  background: #35cd8c;
+  border: none;
+  width: 70px;
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  bottom: 3px;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 600;
+  width: 120px;
+  border-top-left-radius: 40px;
+  cursor: pointer;
+}
+
+
+.right {
+  position: relative;
+  z-index: 999;
+  width: 50%;
+}
+
+.right .veg {
+  width: 40%;
+  top: 30px;
+  position: absolute;
+  right: 280px;
+  z-index: -1;
+  transform: rotate(331deg);
+}
+
+
+.right .plate {
+  width: 55%;
+  margin-left: 50px;
+  margin-top: 90px;
+}
+
+/*   width   */
+
+/* تنسيقات الشاشات الصغيرة والهواتف */
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    min-height: 100vh;
+    padding-bottom: 40px;
+  }
+
+  .hero nav {
+    padding: 20px;
+    flex-wrap: wrap;
+  }
+
+  .hero nav ul {
+    display: none; /* إخفاء القائمة أو تحويلها لقائمة هاتف */
+  }
+
+  .right-sidbar {
+    width: 100%;
+    height: 350px;
+    top: auto;
+    bottom: 0;
+  }
+
+  .content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .left {
+    width: 90%;
+    margin-left: 0;
+    margin-top: 20px;
+    z-index: 10;
+  }
+
+  .left h2 {
+    font-size: 60px;
+  }
+
+  .left h3 {
+    font-size: 32px;
+  }
+
+  form {
+    width: 100%;
+    max-width: 320px;
+    margin: 20px auto 0 auto;
+  }
+
+    .right {
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .right .plate {
+    width: 60%;
+    margin-left: 0; /* إلغاء الهامش القديم الذي يدفعها يميناً */
+    margin-top: 0;
+  }
+
+
+  .right .veg {
+    display: none; /* إخفاء العناصر الجانبية الزائدة على الهاتف */
+  }
+}
